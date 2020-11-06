@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+    <form method="POST" action="/calcular">
+        <div>
+            <label for=valor1>
+                <input type="text" name="valor1" id="valor1" placeholder="NÚMERO"/>
+            </label>
+        </div>
+        <div>
+            <h2>Selecione a operação que deseja realizar</h2>
+            <select name="opcaoOperacao">
+                <option value="+"> + (adição)</option>
+                <option value="-"> - (subtração)</option>
+                <option value="*"> * (multiplicação)</option>
+                <option value="/"> / (divisão)</option>
+            </select>
+        </div>
+        <div>
+            <label for=valor2>
+                <input type="text" name="valor2" id="valor2" placeholder="NÚMERO"/>
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="CALCULAR"/>
+        </div>
+
+    </form>
+
+    <h1 th:if="${calculo !=null}" th:text="${calculo}"></h1>
+
+</body>
+</html>
